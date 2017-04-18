@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-pi-gpio/pi-gpio/pi-gpio.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-pi-gpio/node_modules/pi-gpio/pi-gpio.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-pi-gpio">npmtest-pi-gpio (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-pi-gpio/pi-gpio/pi-gpio.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-pi-gpio/node_modules/pi-gpio/pi-gpio.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.5% <small>(10 / 80)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-pi-gpio/pi-gpio/</a> » pi-gpio.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-pi-gpio/node_modules/pi-gpio/</a> &#187; pi-gpio.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -405,17 +407,17 @@
 191
 192
 193</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">220</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -611,15 +613,15 @@ var rev = fs.readFileSync("/proc/cpuinfo").toString().split("\n").filter(functio
 })[0].split(":")[1].trim();
 &nbsp;
 // tests the device tree directory to determine the actual gpio path
-<span class="cstat-no" title="statement not covered">if (fs.existsSync(sysFsPathNew)) {</span>
-<span class="cstat-no" title="statement not covered">	sysFsPath = sysFsPathNew;</span>
+<span class="cstat-no" title="statement not covered" >if (fs.existsSync(sysFsPathNew)) {</span>
+<span class="cstat-no" title="statement not covered" >	sysFsPath = sysFsPathNew;</span>
 } else {
-<span class="cstat-no" title="statement not covered">	sysFsPath = sysFsPathOld; </span>// fallback for old kernels
+<span class="cstat-no" title="statement not covered" >	sysFsPath = sysFsPathOld; </span>// fallback for old kernels
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered">rev = parseInt(rev, 16) &lt; 3 ? 1 : 2; </span>// http://elinux.org/RPi_HardwareHistory#Board_Revision_History
+<span class="cstat-no" title="statement not covered" >rev = parseInt(rev, 16) &lt; 3 ? 1 : 2; </span>// http://elinux.org/RPi_HardwareHistory#Board_Revision_History
 &nbsp;
-<span class="cstat-no" title="statement not covered">var pinMapping = {</span>
+<span class="cstat-no" title="statement not covered" >var pinMapping = {</span>
 	"3": 0,
 	"5": 1,
 	"7": 4,
@@ -650,150 +652,149 @@ var rev = fs.readFileSync("/proc/cpuinfo").toString().split("\n").filter(functio
 	"40": 21
 };
 &nbsp;
-<span class="cstat-no" title="statement not covered">if (rev == 2) {</span>
-<span class="cstat-no" title="statement not covered">	pinMapping["3"] = 2;</span>
-<span class="cstat-no" title="statement not covered">	pinMapping["5"] = 3;</span>
-<span class="cstat-no" title="statement not covered">	pinMapping["13"] = 27;</span>
+<span class="cstat-no" title="statement not covered" >if (rev == 2) {</span>
+<span class="cstat-no" title="statement not covered" >	pinMapping["3"] = 2;</span>
+<span class="cstat-no" title="statement not covered" >	pinMapping["5"] = 3;</span>
+<span class="cstat-no" title="statement not covered" >	pinMapping["13"] = 27;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function isNumber(number) {</span>
-<span class="cstat-no" title="statement not covered">	return !isNaN(parseInt(number, 10));</span>
+<span class="fstat-no" title="function not covered" >function isNumber(number) {</span>
+<span class="cstat-no" title="statement not covered" >	return !isNaN(parseInt(number, 10));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function noop() {</span>}
+<span class="fstat-no" title="function not covered" >function noop() {</span>}
 &nbsp;
-<span class="fstat-no" title="function not covered">function handleExecResponse(method, pinNumber, callback) {</span>
-<span class="cstat-no" title="statement not covered">	return <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered">		if (err) {</span>
-<span class="cstat-no" title="statement not covered">			console.error("Error when trying to", method, "pin", pinNumber);</span>
-<span class="cstat-no" title="statement not covered">			console.error(stderr);</span>
-<span class="cstat-no" title="statement not covered">			callback(err);</span>
+<span class="fstat-no" title="function not covered" >function handleExecResponse(method, pinNumber, callback) {</span>
+<span class="cstat-no" title="statement not covered" >	return <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (err) {</span>
+<span class="cstat-no" title="statement not covered" >			console.error("Error when trying to", method, "pin", pinNumber);</span>
+<span class="cstat-no" title="statement not covered" >			console.error(stderr);</span>
+<span class="cstat-no" title="statement not covered" >			callback(err);</span>
 		} else {
-<span class="cstat-no" title="statement not covered">			callback();</span>
+<span class="cstat-no" title="statement not covered" >			callback();</span>
 		}
 	}
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function sanitizePinNumber(pinNumber) {</span>
-<span class="cstat-no" title="statement not covered">	if (!isNumber(pinNumber) || !isNumber(pinMapping[pinNumber])) {</span>
-<span class="cstat-no" title="statement not covered">		throw new Error("Pin number isn't valid");</span>
+<span class="fstat-no" title="function not covered" >function sanitizePinNumber(pinNumber) {</span>
+<span class="cstat-no" title="statement not covered" >	if (!isNumber(pinNumber) || !isNumber(pinMapping[pinNumber])) {</span>
+<span class="cstat-no" title="statement not covered" >		throw new Error("Pin number isn't valid");</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return parseInt(pinNumber, 10);</span>
+<span class="cstat-no" title="statement not covered" >	return parseInt(pinNumber, 10);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function sanitizeDirection(direction) {</span>
-<span class="cstat-no" title="statement not covered">	direction = (direction || "").toLowerCase().trim();</span>
-<span class="cstat-no" title="statement not covered">	if (direction === "in" || direction === "input") {</span>
-<span class="cstat-no" title="statement not covered">		return "in";</span>
-	} else <span class="cstat-no" title="statement not covered">if (direction === "out" || direction === "output" || !direction) {</span>
-<span class="cstat-no" title="statement not covered">		return "out";</span>
+<span class="fstat-no" title="function not covered" >function sanitizeDirection(direction) {</span>
+<span class="cstat-no" title="statement not covered" >	direction = (direction || "").toLowerCase().trim();</span>
+<span class="cstat-no" title="statement not covered" >	if (direction === "in" || direction === "input") {</span>
+<span class="cstat-no" title="statement not covered" >		return "in";</span>
+	} else <span class="cstat-no" title="statement not covered" >if (direction === "out" || direction === "output" || !direction) {</span>
+<span class="cstat-no" title="statement not covered" >		return "out";</span>
 	} else {
-<span class="cstat-no" title="statement not covered">		throw new Error("Direction must be 'input' or 'output'");</span>
+<span class="cstat-no" title="statement not covered" >		throw new Error("Direction must be 'input' or 'output'");</span>
 	}
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function sanitizeOptions(options) {</span>
-<span class="cstat-no" title="statement not covered">	var sanitized = {};</span>
+<span class="fstat-no" title="function not covered" >function sanitizeOptions(options) {</span>
+<span class="cstat-no" title="statement not covered" >	var sanitized = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	options.split(" ").forEach(<span class="fstat-no" title="function not covered">function(token) {</span></span>
-<span class="cstat-no" title="statement not covered">		if (token == "in" || token == "input") {</span>
-<span class="cstat-no" title="statement not covered">			sanitized.direction = "in";</span>
+<span class="cstat-no" title="statement not covered" >	options.split(" ").forEach(<span class="fstat-no" title="function not covered" >function(token) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (token == "in" || token == "input") {</span>
+<span class="cstat-no" title="statement not covered" >			sanitized.direction = "in";</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (token == "pullup" || token == "up") {</span>
-<span class="cstat-no" title="statement not covered">			sanitized.pull = "pullup";</span>
+<span class="cstat-no" title="statement not covered" >		if (token == "pullup" || token == "up") {</span>
+<span class="cstat-no" title="statement not covered" >			sanitized.pull = "pullup";</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (token == "pulldown" || token == "down") {</span>
-<span class="cstat-no" title="statement not covered">			sanitized.pull = "pulldown";</span>
+<span class="cstat-no" title="statement not covered" >		if (token == "pulldown" || token == "down") {</span>
+<span class="cstat-no" title="statement not covered" >			sanitized.pull = "pulldown";</span>
 		}
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (!sanitized.direction) {</span>
-<span class="cstat-no" title="statement not covered">		sanitized.direction = "out";</span>
+<span class="cstat-no" title="statement not covered" >	if (!sanitized.direction) {</span>
+<span class="cstat-no" title="statement not covered" >		sanitized.direction = "out";</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (!sanitized.pull) {</span>
-<span class="cstat-no" title="statement not covered">		sanitized.pull = "";</span>
+<span class="cstat-no" title="statement not covered" >	if (!sanitized.pull) {</span>
+<span class="cstat-no" title="statement not covered" >		sanitized.pull = "";</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return sanitized;</span>
+<span class="cstat-no" title="statement not covered" >	return sanitized;</span>
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered">var gpio = {</span>
+<span class="cstat-no" title="statement not covered" >var gpio = {</span>
 	rev: rev,
 &nbsp;
-	open: <span class="fstat-no" title="function not covered">function(pinNumber, options, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
+	open: <span class="fstat-no" title="function not covered" >function(pinNumber, options, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (!callback &amp;&amp; typeof options === "function") {</span>
-<span class="cstat-no" title="statement not covered">			callback = options;</span>
-<span class="cstat-no" title="statement not covered">			options = "out";</span>
+<span class="cstat-no" title="statement not covered" >		if (!callback &amp;&amp; typeof options === "function") {</span>
+<span class="cstat-no" title="statement not covered" >			callback = options;</span>
+<span class="cstat-no" title="statement not covered" >			options = "out";</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		options = sanitizeOptions(options);</span>
+<span class="cstat-no" title="statement not covered" >		options = sanitizeOptions(options);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		exec(gpioAdmin + " export " + pinMapping[pinNumber] + " " + options.pull, handleExecResponse("open", pinNumber, <span class="fstat-no" title="function not covered">function(err) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">return (callback || noop)(err);</span></span>
+<span class="cstat-no" title="statement not covered" >		exec(gpioAdmin + " export " + pinMapping[pinNumber] + " " + options.pull, handleExecResponse("open", pinNumber, <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >return (callback || noop)(err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">			gpio.setDirection(pinNumber, options.direction, callback);</span>
+<span class="cstat-no" title="statement not covered" >			gpio.setDirection(pinNumber, options.direction, callback);</span>
 		}));
 	},
 &nbsp;
-	setDirection: <span class="fstat-no" title="function not covered">function(pinNumber, direction, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
-<span class="cstat-no" title="statement not covered">		direction = sanitizeDirection(direction);</span>
+	setDirection: <span class="fstat-no" title="function not covered" >function(pinNumber, direction, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
+<span class="cstat-no" title="statement not covered" >		direction = sanitizeDirection(direction);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		fs.writeFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/direction", direction, (callback || noop));</span>
+<span class="cstat-no" title="statement not covered" >		fs.writeFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/direction", direction, (callback || noop));</span>
 	},
 &nbsp;
-	getDirection: <span class="fstat-no" title="function not covered">function(pinNumber, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
-<span class="cstat-no" title="statement not covered">		callback = callback || noop;</span>
+	getDirection: <span class="fstat-no" title="function not covered" >function(pinNumber, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
+<span class="cstat-no" title="statement not covered" >		callback = callback || noop;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		fs.readFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/direction", "utf8", <span class="fstat-no" title="function not covered">function(err, direction) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">return callback(err);</span></span>
-<span class="cstat-no" title="statement not covered">			callback(null, sanitizeDirection(direction.trim()));</span>
+<span class="cstat-no" title="statement not covered" >		fs.readFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/direction", "utf8", <span class="fstat-no" title="function not covered" >function(err, direction) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >return callback(err);</span></span>
+<span class="cstat-no" title="statement not covered" >			callback(null, sanitizeDirection(direction.trim()));</span>
 		});
 	},
 &nbsp;
-	close: <span class="fstat-no" title="function not covered">function(pinNumber, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
+	close: <span class="fstat-no" title="function not covered" >function(pinNumber, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		exec(gpioAdmin + " unexport " + pinMapping[pinNumber], handleExecResponse("close", pinNumber, callback || noop));</span>
+<span class="cstat-no" title="statement not covered" >		exec(gpioAdmin + " unexport " + pinMapping[pinNumber], handleExecResponse("close", pinNumber, callback || noop));</span>
 	},
 &nbsp;
-	read: <span class="fstat-no" title="function not covered">function(pinNumber, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
+	read: <span class="fstat-no" title="function not covered" >function(pinNumber, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		fs.readFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/value", <span class="fstat-no" title="function not covered">function(err, data) {</span></span>
-<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">return (callback || noop)(err);</span></span>
+<span class="cstat-no" title="statement not covered" >		fs.readFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/value", <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >return (callback || noop)(err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">			(callback || noop)(null, parseInt(data, 10));</span>
+<span class="cstat-no" title="statement not covered" >			(callback || noop)(null, parseInt(data, 10));</span>
 		});
 	},
 &nbsp;
-	write: <span class="fstat-no" title="function not covered">function(pinNumber, value, callback) {</span>
-<span class="cstat-no" title="statement not covered">		pinNumber = sanitizePinNumber(pinNumber);</span>
+	write: <span class="fstat-no" title="function not covered" >function(pinNumber, value, callback) {</span>
+<span class="cstat-no" title="statement not covered" >		pinNumber = sanitizePinNumber(pinNumber);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		value = !!value ? "1" : "0";</span>
+<span class="cstat-no" title="statement not covered" >		value = !!value ? "1" : "0";</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		fs.writeFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/value", value, "utf8", callback);</span>
+<span class="cstat-no" title="statement not covered" >		fs.writeFile(sysFsPath + "/gpio" + pinMapping[pinNumber] + "/value", value, "utf8", callback);</span>
 	}
 };
 &nbsp;
-<span class="cstat-no" title="statement not covered">gpio.export = gpio.open;</span>
-<span class="cstat-no" title="statement not covered">gpio.unexport = gpio.close;</span>
+<span class="cstat-no" title="statement not covered" >gpio.export = gpio.open;</span>
+<span class="cstat-no" title="statement not covered" >gpio.unexport = gpio.close;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">module.exports = gpio;</span>
+<span class="cstat-no" title="statement not covered" >module.exports = gpio;</span>
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 18:53:18 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 15:48:00 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
