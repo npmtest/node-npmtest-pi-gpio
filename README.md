@@ -1,6 +1,6 @@
 # npmtest-pi-gpio
 
-#### test coverage for  [pi-gpio (v0.0.8)](https://github.com/rakeshpai/pi-gpio)  [![npm package](https://img.shields.io/npm/v/npmtest-pi-gpio.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-pi-gpio) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-pi-gpio.svg)](https://travis-ci.org/npmtest/node-npmtest-pi-gpio)
+#### basic test coverage for  [pi-gpio (v0.0.8)](https://github.com/rakeshpai/pi-gpio)  [![npm package](https://img.shields.io/npm/v/npmtest-pi-gpio.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-pi-gpio) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-pi-gpio.svg)](https://travis-ci.org/npmtest/node-npmtest-pi-gpio)
 
 #### A simple node.js-based GPIO helper for the Raspberry Pi
 
